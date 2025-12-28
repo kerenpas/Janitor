@@ -130,8 +130,8 @@ class CalculateTripsUseCaseTest {
         // Two pointer: try 1.99 + 1.01 = 3.0 ✓ paired
         // Try 1.8 + 1.5 = 3.3 ✗ can't pair
         // 1.8 goes alone, 1.5 remains and goes alone
-        // Total: 4 trips
-        assertThat(result.totalTrips).isEqualTo(4)
+        // Total: 3 trips
+        assertThat(result.totalTrips).isEqualTo(3)
     }
 
     @Test
