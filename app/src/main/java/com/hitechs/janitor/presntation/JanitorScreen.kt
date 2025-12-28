@@ -159,6 +159,7 @@ private class PreviewJanitorViewModel : JanitorViewModel(
 
 @Preview(showBackground = true, name = "Empty Bags List")
 @Composable
+@Suppress("ViewModelConstructorInComposable")
 fun LoadedViewEmptyPreview() {
     MaterialTheme {
         LoadedView(
@@ -174,6 +175,7 @@ fun LoadedViewEmptyPreview() {
 
 @Preview(showBackground = true, name = "With Bags")
 @Composable
+@Suppress("ViewModelConstructorInComposable")
 fun LoadedViewWithBagsPreview() {
     MaterialTheme {
         LoadedView(
@@ -193,6 +195,7 @@ fun LoadedViewWithBagsPreview() {
 
 @Preview(showBackground = true, name = "With Trips Result")
 @Composable
+@Suppress("ViewModelConstructorInComposable")
 fun LoadedViewWithTripsPreview() {
     MaterialTheme {
         LoadedView(
@@ -218,6 +221,7 @@ fun LoadedViewWithTripsPreview() {
 
 @Preview(showBackground = true, name = "With Input Error")
 @Composable
+@Suppress("ViewModelConstructorInComposable")
 fun LoadedViewWithErrorPreview() {
     MaterialTheme {
         LoadedView(
@@ -233,6 +237,7 @@ fun LoadedViewWithErrorPreview() {
 
 @Preview(showBackground = true, name = "Error State")
 @Composable
+@Suppress("ViewModelConstructorInComposable")
 fun ErrorViewPreview() {
     MaterialTheme {
         ErrorView(
