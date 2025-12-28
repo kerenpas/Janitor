@@ -29,12 +29,7 @@ Janitor helps optimize garbage collection by calculating the minimum number of t
 - **Coroutines & Flow**: Async operations and state management
 - **Material 3**: Latest Material Design components
 
-### Testing
-- **JUnit 4**: Unit testing framework
-- **MockK**: Mocking library
-- **Turbine**: Flow testing
-- **Google Truth**: Fluent assertions
-- **Coroutines Test**: Testing coroutines
+
 
 ## Requirements
 
