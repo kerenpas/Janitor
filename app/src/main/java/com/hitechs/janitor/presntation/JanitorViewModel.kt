@@ -40,7 +40,7 @@ open class JanitorViewModel @Inject constructor(
             }
 
             // Check lower bound
-            weight < 1.01 -> {
+            weight <= 1.0 -> {
                 updateStateWithError(InputError.WeightTooLow)
                 return
             }
@@ -58,7 +58,8 @@ open class JanitorViewModel @Inject constructor(
                     val updatedBags = currentState.bags + GarbageBag(weight = weight)
                     _state.value = currentState.copy(
                         bags = updatedBags,
-                        inputError = null
+                        inputError = null,
+                        tripsResult = null // Clear trips when adding new bag
                     )
                 } else {
                     _state.value = JanitorState.BagsLoaded(
@@ -80,7 +81,7 @@ open class JanitorViewModel @Inject constructor(
 
     private fun calculateTrips() {
         val currentState = _state.value
-        if (currentState is JanitorState.BagsLoaded && currentState.bags.isNotEmpty()) {
+        if (currentState is JanitorState.BagsLoaded) {
             try {
                 val tripsResult = calculateTripsUseCase(currentState.bags)
                 _state.value = currentState.copy(tripsResult = tripsResult)
