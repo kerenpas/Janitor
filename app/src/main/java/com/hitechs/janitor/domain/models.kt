@@ -1,6 +1,8 @@
 package com.hitechs.janitor.domain
 
-data class GarbageBag(val weight: Double)
+import java.util.UUID
+
+data class GarbageBag(val weight: Double, val id: UUID = UUID.randomUUID())
 
 data class TripsResult(
     val totalTrips: Int,

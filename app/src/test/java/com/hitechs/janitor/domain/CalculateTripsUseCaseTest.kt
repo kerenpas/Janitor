@@ -37,7 +37,7 @@ class CalculateTripsUseCaseTest {
         // Then
         assertThat(result.totalTrips).isEqualTo(1)
         assertThat(result.tripGroups).hasSize(1)
-        assertThat(result.tripGroups[0]).containsExactly(GarbageBag(1.5))
+        assertThat(result.tripGroups[0].map { it.weight }).containsExactly(1.5)
     }
 
     @Test
@@ -51,7 +51,7 @@ class CalculateTripsUseCaseTest {
         // Then
         assertThat(result.totalTrips).isEqualTo(1)
         assertThat(result.tripGroups).hasSize(1)
-        assertThat(result.tripGroups[0]).containsExactly(GarbageBag(2.5))
+        assertThat(result.tripGroups[0].map { it.weight }).containsExactly(2.5)
     }
 
     @Test
